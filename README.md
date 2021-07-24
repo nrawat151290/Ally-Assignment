@@ -40,3 +40,11 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 1. Upto width of 600px, filters and OKRs will be rendered in a stacked fashion.
 2. Above 600px, filters and OKRs will be rendered adjacent.
+
+
+
+
+
+# Things not covered
+
+1. Avatar images are not there.
