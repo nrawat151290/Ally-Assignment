@@ -31,7 +31,7 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 1. Filter selection will reset the list to show limited results.
 2. Multiple filters can be selected.
-3. Selecting all filters will render the entire data.
+3. Complete selection/unselection will render the entire data.
 
 
 
