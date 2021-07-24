@@ -48,3 +48,10 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 # Things not covered
 
 1. Avatar images are not there.
+
+
+
+
+# Things added for visual ease
+
+1. Added a pill adjacent to Objective title to make it easy to validate filter behavior.
