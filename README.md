@@ -1,8 +1,18 @@
+# General Information
+
+1. Used create-react-app boilerplate to setup the skeleton.
+2. Redux & Redux-Saga middleware have been setup from scratch, without using any boilerplate.
+3. Axios has been used for XHR calls.
+
+
+
+
 # Steps to run the application
 
 1. Clone the repository locally.
 2. Go to root folder and run **yarn start**. This will initiate webpack-dev-server.
 3. Browser will automatically open up with application rendered.
+
 
 
 
