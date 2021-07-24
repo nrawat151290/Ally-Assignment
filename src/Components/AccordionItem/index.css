@@ -1,6 +1,5 @@
 .accordion-item {
     padding: 30px 0;
-    border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: baseline;
 }
