@@ -29,7 +29,7 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 # Filters
 
-1. Filter selection will reset the list to show limited results.
+1. Filter selection will render the list to show limited results.
 2. Multiple filters can be selected.
 3. Complete selection/unselection will render the entire data.
 
@@ -38,6 +38,7 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 # Expand and Collapse
 1. Expand/Collapse would work on clicking on **arrows only**. This has been done to keep toggle and show-details behavior separate.
+2. **Persistent Behavior:** Toggle state is persisted even on selection/unselection of filters.
 
 
 
