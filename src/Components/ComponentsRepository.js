@@ -4,6 +4,8 @@ import Checkbox from './Checkbox';
 import Modal from './Modal';
 import Filter from './Filter';
 import GlobalErrorHandler from './GlobalErrorHandler';
+import OKRS from './OKRS';
+import Arrow from './Arrow';
 
 export {
   Accordion,
@@ -11,5 +13,7 @@ export {
   Checkbox,
   Filter,
   Modal,
-  GlobalErrorHandler
+  GlobalErrorHandler,
+  OKRS,
+  Arrow
 }

@@ -5,3 +5,19 @@
     transform: translate(-50%, -50%);
     font-size: 32px;
 }
+
+.text-xlarge {
+    font-size: 20px;
+}
+
+.text-large {
+    font-size: 16px;
+}
+
+.text-md {
+    font-size: 14px;
+}
+
+.text-sm {
+    font-size: 12px;
+}

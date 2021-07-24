@@ -1,0 +1,55 @@
+.okrs {
+    flex: 3;
+}
+
+.okrs .objective-title {
+    display: flex;
+}
+
+.okrs .objective-title .objective-title__position {
+    flex: 0;
+    color: lightgrey;
+    font-weight: 500;
+}
+
+.okrs .objective-title .objective-title__text {
+    margin-left: 15px;
+    cursor: pointer;
+    color: rgb(2, 146, 243);
+}
+
+.okrs .objective-title .objective-title__text:hover {
+    text-decoration: underline;
+}
+
+.okrs .key-result {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.okrs .key-result::before{
+    content: "";
+    position: absolute;
+    left: -50px;
+    color: lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 3px;
+    width: 10px;
+}
+
+.okrs .key-result .key-result-pointer {
+    flex: 0;
+    color: lightgrey;
+}
+
+.okrs .key-result .key-result-title {
+    margin-left: 15px;
+    color: rgb(2, 146, 243);;
+    cursor: pointer;
+}
+
+.okrs .key-result .key-result-title:hover {
+    text-decoration: underline;
+}
