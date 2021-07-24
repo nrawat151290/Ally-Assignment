@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { OkrsContext } from '../../Utils/Contexts';
 import './index.css';
 
-const OKRS = () => {
+const OKRS = (props) => {
   function showDetails(data, event) {
     console.log(data);
   }
@@ -42,12 +42,14 @@ const OKRS = () => {
       </ol>
     )
   }
+  const { wrapperClassName } = props;
+  const wrapperClasses = `okrs ${wrapperClassName}`;
   return (
     <OkrsContext.Consumer>
       {
         (okrs) => {
           return (
-            <section className="okrs">
+            <section className={wrapperClasses}>
               <h2 className="okrs__heading">
                 Objectives and Key Results ({okrs.length})
               </h2>
@@ -62,6 +64,11 @@ const OKRS = () => {
       }
     </OkrsContext.Consumer>
   );
+}
+
+
+OKRS.propTypes = {
+  wrapperClassName: PropTypes.string
 }
 
 export default OKRS

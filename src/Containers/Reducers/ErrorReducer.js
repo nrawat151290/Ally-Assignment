@@ -1,4 +1,4 @@
-import { ERROR_OCCURRED } from "../../Utils/ActionTypes";
+import { ERROR_OCCURRED } from "../Actions/ActionTypes";
 
 const DEFAULT_STATE = {
   message: ""

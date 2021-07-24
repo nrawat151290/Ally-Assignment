@@ -1,4 +1,4 @@
-import { OKRS_RECEIVED, FILTER_OKRS, FETCHING_DATA } from "../../Utils/ActionTypes";
+import { OKRS_RECEIVED, FILTER_OKRS, FETCHING_DATA } from "../Actions/ActionTypes";
 
 const DEFAULT_STATE = {
   okrs: [],

@@ -6,10 +6,10 @@ export const fetchOKRs = async () => {
   return new Promise((resolve) => {
     /*
       API is pretty quick.
-      Adding a deliberate delay of 1.5s in order to show loader for a moment.
+      Adding a deliberate delay of 2s in order to show loader for a moment.
     */
     setTimeout(() => {
       resolve(result);
-    }, 1500);
+    }, 2000);
   });
 };

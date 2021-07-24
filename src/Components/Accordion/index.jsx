@@ -24,11 +24,13 @@ class Accordion extends PureComponent {
       dataAttrs = {},
       items = [],
       renderAccordionItemHead = () => { },
-      renderAccordionItemContent = () => { }
+      renderAccordionItemContent = () => { },
+      wrapperClassName
     } = this.props;
     const { activeAccordionItems } = this.state;
+    const wrapperClasses = `accordion ${wrapperClassName || ""}`;
     return (
-      <div className="accordion" {...dataAttrs}>
+      <div className={wrapperClasses} {...dataAttrs}>
         {
           items.map((item, index) => {
             return (
@@ -66,6 +68,7 @@ Accordion.propTypes = {
   dataAttrs: PropTypes.object,
   renderAccordionItemHead: PropTypes.func.isRequired,
   renderAccordionItemContent: PropTypes.func.isRequired,
+  wrapperClassName: PropTypes.string
 }
 
 export default Accordion;

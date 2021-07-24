@@ -2,7 +2,7 @@ import {
   FETCH_OKRS,
   OKRS_RECEIVED,
   FILTER_OKRS
-} from '../../Utils/ActionTypes';
+} from './ActionTypes';
 
 export const fetchOKRs = ({ filterKey }) => {
   return {

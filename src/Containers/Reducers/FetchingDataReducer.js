@@ -1,4 +1,4 @@
-import { FETCHING_DATA, FETCH_COMPLETE } from "../../Utils/ActionTypes";
+import { FETCHING_DATA, FETCH_COMPLETE } from "../Actions/ActionTypes";
 
 const DEFAULT_STATE = true
 

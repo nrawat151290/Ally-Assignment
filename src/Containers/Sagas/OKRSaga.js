@@ -1,6 +1,6 @@
 import { put } from "redux-saga/effects";
 import { fetchOKRs } from "../../Utils/Services";
-import { OKRS_RECEIVED, ERROR_OCCURRED, FETCHING_DATA, FETCH_COMPLETE } from "../../Utils/ActionTypes";
+import { OKRS_RECEIVED, ERROR_OCCURRED, FETCHING_DATA, FETCH_COMPLETE } from "../Actions/ActionTypes";
 import { ERROR_MESSAGES } from '../../Utils/Constants'
 
 export function* OKRSaga({ filterKey }) {

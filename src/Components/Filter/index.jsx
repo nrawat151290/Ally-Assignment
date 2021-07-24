@@ -18,12 +18,13 @@ class Filter extends PureComponent {
     onSelection(this.selectedValues);
   }
   render() {
-    const { filters = [] } = this.props;
+    const { filters = [], wrapperClassName } = this.props;
     if (!Array.isArray(filters) || !filters.length) {
       return null;
     }
+    const wrapperClasses = `filter ${wrapperClassName || ""}`;
     return (
-      <section className="filter">
+      <section className={wrapperClasses}>
         <h2 className="filter__heading">
           Filters
         </h2>
@@ -46,7 +47,8 @@ class Filter extends PureComponent {
 
 Filter.propTypes = {
   filters: PropTypes.arrayOf(PropTypes.string),
-  onSelection: PropTypes.func.isRequired
+  onSelection: PropTypes.func.isRequired,
+  wrapperClassName: PropTypes.string
 }
 
 export default Filter;

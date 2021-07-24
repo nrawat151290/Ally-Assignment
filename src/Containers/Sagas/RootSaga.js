@@ -1,5 +1,5 @@
 import { takeLatest } from "redux-saga/effects";
-import { FETCH_OKRS } from '../../Utils/ActionTypes';
+import { FETCH_OKRS } from '../Actions/ActionTypes';
 
 /* List of all application sagas */
 import { OKRSaga } from './OKRSaga';
