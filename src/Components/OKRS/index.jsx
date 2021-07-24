@@ -5,8 +5,9 @@ import { OkrsContext } from '../../Utils/Contexts';
 import './index.css';
 
 const OKRS = (props) => {
-  function showDetails(data, event) {
-    console.log(data);
+  function showDetails(data) {
+    const { showDetails = () => { } } = props;
+    showDetails(data);
   }
   const renderAccordionHead = (data = {}, position) => {
     return (
@@ -43,7 +44,7 @@ const OKRS = (props) => {
     )
   }
   const { wrapperClassName } = props;
-  const wrapperClasses = `okrs ${wrapperClassName}`;
+  const wrapperClasses = `okrs ${wrapperClassName || ""}`;
   return (
     <OkrsContext.Consumer>
       {
@@ -68,7 +69,8 @@ const OKRS = (props) => {
 
 
 OKRS.propTypes = {
-  wrapperClassName: PropTypes.string
+  wrapperClassName: PropTypes.string,
+  showDetails: PropTypes.func
 }
 
 export default OKRS

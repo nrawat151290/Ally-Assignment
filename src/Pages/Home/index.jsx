@@ -2,13 +2,16 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchOKRs, filterOKRs } from '../../Containers/Actions/ActionsRepository';
-import { Filter, OKRS, Loader } from '../../Components/ComponentsRepository';
+import { Filter, OKRS, Loader, Details } from '../../Components/ComponentsRepository';
 import { FILTER_KEY } from '../../Utils/Constants';
 import { OkrsContext } from '../../Utils/Contexts';
 import { filterData } from '../../Utils/Helpers';
 import './index.css';
 
 class Home extends PureComponent {
+  state = {
+    selectedObjective: null
+  }
   componentDidMount() {
     const { fetchOKRs = () => { } } = this.props;
 
@@ -21,8 +24,21 @@ class Home extends PureComponent {
     filterOKRs(FILTER_KEY, selectedFilters);
   }
 
+  showDetails = (selectedObjective = null) => {
+    this.setState({
+      selectedObjective
+    });
+  }
+
+  hideDetails = () => {
+    this.setState({
+      selectedObjective: null
+    });
+  }
+
   render() {
     const { filters, okrs, isFetching = false } = this.props;
+    const { selectedObjective } = this.state;
     if (isFetching) {
       return <Loader />
     }
@@ -33,8 +49,15 @@ class Home extends PureComponent {
           onSelection={this.filter}
         />
         <OkrsContext.Provider value={okrs}>
-          <OKRS />
+          <OKRS showDetails={this.showDetails} />
         </OkrsContext.Provider>
+        {
+          selectedObjective &&
+          <Details
+            data={selectedObjective}
+            onDetailsHide={this.hideDetails}
+          />
+        }
       </div>
     )
   }

@@ -7,6 +7,7 @@ import GlobalErrorHandler from './GlobalErrorHandler';
 import OKRS from './OKRS';
 import Arrow from './Arrow';
 import Loader from './Loader';
+import Details from './Details';
 
 export {
   Accordion,
@@ -17,5 +18,6 @@ export {
   GlobalErrorHandler,
   OKRS,
   Arrow,
-  Loader
+  Loader,
+  Details
 }

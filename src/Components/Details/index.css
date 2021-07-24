@@ -1,0 +1,22 @@
+.objective-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: grey;
+}
+
+.objective-details:last-of-type {
+    margin-bottom: 0;
+}
+
+.objective-details .objective-details__label {
+    flex: 1;
+    margin-right: 30px;
+    text-transform: capitalize;
+}
+
+.objective-details .objective-details__value {
+    flex: 3;
+    font-weight: 600;
+}
