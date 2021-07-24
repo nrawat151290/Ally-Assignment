@@ -61,4 +61,5 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 # Things added for visual ease
 
 1. Added a pill adjacent to Objective title to make it easy to validate filter behavior.
-2. Color of objective and key-results title is kept as a shade of blue. This would clearly indicate that they are clickable.
+2. Added a deliberate delay of 2s in service in order to render loader for a moment.
+3. Color of objective and key-results title is kept as a shade of blue. This would clearly indicate that they are clickable.
