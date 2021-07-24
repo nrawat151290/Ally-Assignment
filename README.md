@@ -2,7 +2,7 @@
 
 1. Clone the repository locally.
 2. Go to root folder and run **yarn start**. This will initiate webpack-dev-server.
-3. Browser will automatically open up with application opened.
+3. Browser will automatically open up with application rendered.
 
 
 
