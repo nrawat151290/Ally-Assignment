@@ -51,7 +51,7 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 # Things added for visual ease
 1. **Category Pills:** Added a pill adjacent to Objective title to make it easy to validate filter behavior.
-2. **API Delay:** Added a deliberate delay of 2s in service in order to render loader for a moment.
+2. **API Delay:** Added a **deliberate delay of 2s** in service in order to render loader for a moment.
 3. Added count of rendered records in the heading of OKRs section.
 4. Color of objective and key-results title is kept as a shade of blue. This would clearly indicate that they are clickable.
 
