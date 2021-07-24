@@ -3,6 +3,7 @@
 1. Used create-react-app boilerplate to setup the skeleton.
 2. Redux & Redux-Saga middleware have been setup from scratch, without using any boilerplate.
 3. Axios has been used for XHR calls.
+4. Wherever possible, Block, Elements, Modifier(BEM) methodology has been used to name CSS classes.
 
 
 
@@ -38,4 +39,4 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 # Responsiveness
 
 1. Upto width of 600px, filters and OKRs will be rendered in a stacked fashion.
-2. Above 600px, filters and OKRs willbe rendered adjacent.
+2. Above 600px, filters and OKRs will be rendered adjacent.
