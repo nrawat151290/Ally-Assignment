@@ -59,3 +59,4 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 # Things not covered
 1. Avatar images are not there.
+2. Error Boundaries are not used. Instead have used a connected container component called **GlobalErrorHandler**.

@@ -1,56 +1,39 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { AccordionItem } from '../ComponentsRepository';
 import './index.css';
 
-class Accordion extends PureComponent {
-  state = {
-    activeAccordionItems: []
+const Accordion = (props) => {
+  const {
+    dataAttrs = {},
+    items = [],
+    renderAccordionItemHead = () => { },
+    renderAccordionItemContent = () => { },
+    wrapperClassName
+  } = props;
+  const wrapperClasses = `accordion ${wrapperClassName || ""}`;
+  if (!items.length) {
+    return null;
   }
-  toggleHandler = (selected) => {
-    const { activeAccordionItems } = this.state;
-    const updatedSelections = [...activeAccordionItems];
-    if (activeAccordionItems.includes(selected)) {
-      updatedSelections.splice(activeAccordionItems.indexOf(selected), 1);
-    } else {
-      updatedSelections.push(selected);
-    }
-    this.setState({
-      activeAccordionItems: updatedSelections
-    });
-  }
-  render() {
-    const {
-      dataAttrs = {},
-      items = [],
-      renderAccordionItemHead = () => { },
-      renderAccordionItemContent = () => { },
-      wrapperClassName
-    } = this.props;
-    const { activeAccordionItems } = this.state;
-    const wrapperClasses = `accordion ${wrapperClassName || ""}`;
-    return (
-      <div className={wrapperClasses} {...dataAttrs}>
-        {
-          items.map((item, index) => {
-            return (
-              <AccordionItem
-                key={item.id}
-                open={activeAccordionItems.includes(item.id)}
-                dataAttrs={{
-                  "data-item": item.id
-                }}
-                onToggle={this.toggleHandler}
-                head={renderAccordionItemHead(item, index + 1)}
-              >
-                {renderAccordionItemContent(item)}
-              </AccordionItem>
-            );
-          })
-        }
-      </div>
-    )
-  }
+  return (
+    <div className={wrapperClasses} {...dataAttrs}>
+      {
+        items.map((item, index) => {
+          return (
+            <AccordionItem
+              key={item.id}
+              dataAttrs={{
+                "data-item": item.id
+              }}
+              head={renderAccordionItemHead(item, index + 1)}
+            >
+              {renderAccordionItemContent(item)}
+            </AccordionItem>
+          );
+        })
+      }
+    </div>
+  )
 }
 
 Accordion.propTypes = {
