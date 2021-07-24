@@ -36,6 +36,12 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 
 
+# Expand and Collapse
+1. Expand/Collapse would work on clicking on **arrows only**. This has been done to keep toggle and show-details behavior separate.
+
+
+
+
 # Responsiveness
 
 1. Upto width of 600px, filters and OKRs will be rendered in a stacked fashion.
@@ -55,3 +61,4 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 # Things added for visual ease
 
 1. Added a pill adjacent to Objective title to make it easy to validate filter behavior.
+2. Color of objective and key-results title is kept as a shade of blue. This would clearly indicate that they are clickable.
