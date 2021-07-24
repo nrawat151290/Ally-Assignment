@@ -23,8 +23,10 @@ class Filter extends PureComponent {
       return null;
     }
     return (
-      <div className="filter">
-        <h2 className="filter__heading">Filters</h2>
+      <section className="filter">
+        <h2 className="filter__heading">
+          Filters
+        </h2>
         {
           filters.map((filter) => {
             return (
@@ -37,7 +39,7 @@ class Filter extends PureComponent {
             );
           })
         }
-      </div>
+      </section>
     );
   }
 }

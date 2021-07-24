@@ -1,5 +1,16 @@
 .okrs {
     flex: 3;
+    margin-top: 50px;
+}
+
+.okrs .okrs__heading {
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 600px) {
+    .okrs {
+        margin-top: 0;
+    }
 }
 
 .okrs .objective-title {
@@ -10,6 +21,15 @@
     flex: 0;
     color: lightgrey;
     font-weight: 500;
+}
+
+.okrs .objective-title .category {
+    margin-left: 30px;
+    font-weight: 400;
+    padding: 2px 10px;
+    background-color: lightgray;
+    border-radius: 20px;
+    color: #767171;
 }
 
 .okrs .objective-title .objective-title__text {
@@ -29,7 +49,7 @@
     position: relative;
 }
 
-.okrs .key-result::before{
+.okrs .key-result::before {
     content: "";
     position: absolute;
     left: -50px;
@@ -46,7 +66,7 @@
 
 .okrs .key-result .key-result-title {
     margin-left: 15px;
-    color: rgb(2, 146, 243);;
+    color: rgb(2, 146, 243);
     cursor: pointer;
 }
 

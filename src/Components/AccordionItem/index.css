@@ -11,7 +11,6 @@
 
 .accordion-item .accordion-item-icon {
     cursor: pointer;
-    margin-right: 20px;
     transition: all 0.5s;
     transform: rotate(0deg);
     transform-origin: center center;

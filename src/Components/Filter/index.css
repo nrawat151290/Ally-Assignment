@@ -1,7 +1,8 @@
 .filter {
     flex: 1;
+    margin-right: 50px;
 }
 
 .filter .filter__heading {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
