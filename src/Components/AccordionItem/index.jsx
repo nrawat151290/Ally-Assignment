@@ -7,16 +7,15 @@ class AccordionItem extends PureComponent {
   state = {
     open: true
   }
-  toggleHandler = (event) => {
+  toggleHandler = () => {
     this.setState((prevState) => {
       return {
         open: !prevState.open
       };
     });
-    // onToggle(event.currentTarget.getAttribute('data-item'));
   }
   render() {
-    let { head, children, onToggle = () => { }, dataAttrs = {}, wrapperClassName } = this.props;
+    let { head, children, dataAttrs = {}, wrapperClassName } = this.props;
     const { open } = this.state;
     const { "data-item": dataItem, ...restDataAttrs } = dataAttrs;
     const wrapperClasses = `accordion-item${open ? ' accordion-item--open' : ""} ${wrapperClassName || ""}`;
@@ -42,7 +41,6 @@ class AccordionItem extends PureComponent {
 AccordionItem.propTypes = {
   children: PropTypes.node.isRequired,
   head: PropTypes.node.isRequired,
-  onToggle: PropTypes.func.isRequired,
   dataAttrs: PropTypes.object,
   wrapperClassName: PropTypes.string
 }
