@@ -14,7 +14,7 @@ const OKRS = (props) => {
       <h4 className="objective-title">
         <span className="objective-title__position">{position}.</span>
         <div onClick={showDetails.bind(this, data)} className="objective-title__text">
-          {data.title.replace(/"/g, "")}
+          {data.title}
         </div>
         <label className="category text-sm">{data.category}</label>
       </h4>
@@ -34,7 +34,7 @@ const OKRS = (props) => {
             return (
               <li key={keyResult.id} className="key-result">
                 <div onClick={showDetails.bind(this, keyResult)} className="key-result-title text-md">
-                  {keyResult.title.replace(/"/g, "")}
+                  {keyResult.title}
                 </div>
               </li>
             )
