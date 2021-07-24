@@ -45,8 +45,8 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 # Responsiveness
 
-1. Upto width of 600px, filters and OKRs will be rendered in a stacked fashion.
-2. Above 600px, filters and OKRs will be rendered adjacent.
+1. Upto width of 768px, filters and OKRs will be rendered in a stacked fashion.
+2. Above 768px, filters and OKRs will be rendered adjacent.
 3. Category pills will only render above 1000px. These are just
 
 

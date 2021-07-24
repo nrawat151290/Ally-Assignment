@@ -6,3 +6,9 @@
 .filter .filter__heading {
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 768px) {
+    .filter {
+        flex: 100%;
+    }
+}

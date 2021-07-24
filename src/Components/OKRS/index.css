@@ -1,5 +1,5 @@
 .okrs {
-    flex: 3;
+    flex: 100%;
     margin-top: 50px;
 }
 
@@ -67,9 +67,10 @@
     text-decoration: underline;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     .okrs {
         margin-top: 0;
+        flex: 3;
     }
 }
 
