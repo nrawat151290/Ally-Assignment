@@ -12,7 +12,7 @@
 1. Clone the repository locally.
 2. Run **npm install** under root folder(where package.json is placed).
 3. Go to root folder and run **yarn start**. This will initiate webpack-dev-server.
-4. Browser will automatically open up with application rendered.
+4. Browser will automatically open up with application rendered on **localhost:3000/ally/home**.
 
 
 
