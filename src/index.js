@@ -6,6 +6,7 @@ import store from './ConfigureStore';
 import { GlobalErrorHandler } from './Components/ComponentsRepository';
 import './Styles/reset.css';
 import './Styles/common.css';
+import './Styles/typography.css';
 
 ReactDOM.render(
   <Provider store={store}>

@@ -33,7 +33,7 @@ const OKRS = (props) => {
           keyResults.map((keyResult) => {
             return (
               <li key={keyResult.id} className="key-result">
-                <div onClick={showDetails.bind(this, keyResult)} className="key-result-title text-sm">
+                <div onClick={showDetails.bind(this, keyResult)} className="key-result-title text-md">
                   {keyResult.title.replace(/"/g, "")}
                 </div>
               </li>
