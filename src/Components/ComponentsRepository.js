@@ -6,6 +6,7 @@ import Filter from './Filter';
 import GlobalErrorHandler from './GlobalErrorHandler';
 import OKRS from './OKRS';
 import Arrow from './Arrow';
+import Loader from './Loader';
 
 export {
   Accordion,
@@ -15,5 +16,6 @@ export {
   Modal,
   GlobalErrorHandler,
   OKRS,
-  Arrow
+  Arrow,
+  Loader
 }

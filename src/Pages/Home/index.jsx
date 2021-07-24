@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchOKRs, filterOKRs } from '../../Containers/Actions/ActionsRepository';
-import { Filter, OKRS } from '../../Components/ComponentsRepository';
+import { Filter, OKRS, Loader } from '../../Components/ComponentsRepository';
 import { FILTER_KEY } from '../../Utils/Constants';
 import { OkrsContext } from '../../Utils/Contexts';
 import { filterData } from '../../Utils/Helpers';
@@ -22,7 +22,10 @@ class Home extends PureComponent {
   }
 
   render() {
-    const { filters, okrs } = this.props;
+    const { filters, okrs, isFetching = false } = this.props;
+    if (isFetching) {
+      return <Loader />
+    }
     return (
       <div className="home-page">
         <Filter
@@ -54,7 +57,7 @@ const mapStateToProps = ({ okrs: {
   okrs,
   filter,
   filters
-} = {} }) => {
+} = {}, isFetching }) => {
 
   /* Process raw OKRs to create a list of mapping of objective to key-results */
   let objectiveKeyResultsMappedList = generateObjectivesToKeyReultsMappingList(okrs);
@@ -63,7 +66,8 @@ const mapStateToProps = ({ okrs: {
   return {
     okrs: objectiveKeyResultsMappedList,
     filter,
-    filters
+    filters,
+    isFetching
   };
 }
 
