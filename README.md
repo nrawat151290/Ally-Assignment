@@ -46,6 +46,7 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 1. Upto width of 600px, filters and OKRs will be rendered in a stacked fashion.
 2. Above 600px, filters and OKRs will be rendered adjacent.
+3. Category pills will only render above 1000px. These are just
 
 
 
@@ -60,6 +61,7 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 # Things added for visual ease
 
-1. Added a pill adjacent to Objective title to make it easy to validate filter behavior.
-2. Added a deliberate delay of 2s in service in order to render loader for a moment.
-3. Color of objective and key-results title is kept as a shade of blue. This would clearly indicate that they are clickable.
+1. **Category Pills:** Added a pill adjacent to Objective title to make it easy to validate filter behavior.
+2. **API Delay:** Added a deliberate delay of 1.5s in service in order to render loader for a moment.
+3. Added number of rendered records in the heading of OKRs section.
+4. Color of objective and key-results title is kept as a shade of blue. This would clearly indicate that they are clickable.

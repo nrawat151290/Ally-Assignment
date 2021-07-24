@@ -2,7 +2,6 @@ import React from 'react';
 import { Accordion } from '../ComponentsRepository';
 import PropTypes from 'prop-types';
 import { OkrsContext } from '../../Utils/Contexts';
-import { ALPHABETS } from '../../Utils/Constants';
 import './index.css';
 
 const OKRS = () => {
@@ -27,16 +26,21 @@ const OKRS = () => {
         <h5>No key results to display</h5>
       )
     }
-    return keyResults.map((keyResult, index) => {
-      return (
-        <div key={keyResult.id} className="key-result">
-          <span className="key-result-pointer text-md">{ALPHABETS[index]}.</span>
-          <div onClick={showDetails.bind(this, keyResult)} className="key-result-title text-sm">
-            {keyResult.title.replace(/"/g, "")}
-          </div>
-        </div>
-      )
-    });
+    return (
+      <ol>
+        {
+          keyResults.map((keyResult) => {
+            return (
+              <li key={keyResult.id} className="key-result">
+                <div onClick={showDetails.bind(this, keyResult)} className="key-result-title text-sm">
+                  {keyResult.title.replace(/"/g, "")}
+                </div>
+              </li>
+            )
+          })
+        }
+      </ol>
+    )
   }
   return (
     <OkrsContext.Consumer>
@@ -45,7 +49,7 @@ const OKRS = () => {
           return (
             <section className="okrs">
               <h2 className="okrs__heading">
-                Objectives and Key Results
+                Objectives and Key Results ({okrs.length})
               </h2>
               <Accordion
                 items={okrs}

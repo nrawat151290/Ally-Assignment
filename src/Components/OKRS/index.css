@@ -7,12 +7,6 @@
     margin-bottom: 40px;
 }
 
-@media screen and (min-width: 600px) {
-    .okrs {
-        margin-top: 0;
-    }
-}
-
 .okrs .objective-title {
     display: flex;
 }
@@ -24,6 +18,7 @@
 }
 
 .okrs .objective-title .category {
+    display: none;
     margin-left: 30px;
     font-weight: 400;
     padding: 2px 10px;
@@ -43,7 +38,6 @@
 }
 
 .okrs .key-result {
-    display: flex;
     align-items: center;
     padding: 20px 0;
     position: relative;
@@ -55,12 +49,11 @@
     left: -50px;
     color: lightgrey;
     border-bottom: 1px solid lightgrey;
-    padding-top: 3px;
+    padding-top: 12px;
     width: 10px;
 }
 
-.okrs .key-result .key-result-pointer {
-    flex: 0;
+.okrs .key-result::marker {
     color: lightgrey;
 }
 
@@ -72,4 +65,18 @@
 
 .okrs .key-result .key-result-title:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+    .okrs {
+        margin-top: 0;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .okrs .objective-title .category {
+        display: block;
+    }
 }
