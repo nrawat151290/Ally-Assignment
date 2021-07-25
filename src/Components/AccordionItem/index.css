@@ -10,7 +10,7 @@
 
 .accordion-item .accordion-item-icon {
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 1s;
     transform: rotate(0deg);
     transform-origin: center center;
 }
@@ -20,7 +20,11 @@
 }
 
 .accordion-item .accordion-item-content {
-    visibility: hidden;
+    padding: 0 0 0 50px;
+    border-left: 0.5px solid lightgrey;
+    margin-top: 20px;
+    overflow: hidden;
+    transition: max-height 0.5s linear;
     max-height: 0;
 }
 
@@ -29,9 +33,6 @@
 }
 
 .accordion-item--open .accordion-item-content {
-    padding: 0 0 0 50px;
-    visibility: visible;
-    max-height: 100%;
-    border-left: 0.5px solid lightgrey;
-    margin-top: 20px;
+    max-height: 1000px;
+    transition: max-height 1.5s linear;
 }
