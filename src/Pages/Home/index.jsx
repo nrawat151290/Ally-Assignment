@@ -40,7 +40,7 @@ class Home extends PureComponent {
     const { filters, okrs, isFetching = false } = this.props;
     const { selectedObjective } = this.state;
     if (isFetching) {
-      return <Loader />
+      return <Loader message="Sit back and relax. OKRs are on their way..." />
     }
     return (
       <div className="home-page">

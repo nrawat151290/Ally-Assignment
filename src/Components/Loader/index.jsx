@@ -1,17 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './index.css';
 
-const Loader = () => {
+const Loader = (props) => {
+  const { message = "Loading..." } = props;
   return (
     <div className="loader">
       <div className="loader-body">
         <div className="spinner" />
-        <h3 className="loader__text">
-          Sit back and relax. OKRs are on their way.
-        </h3>
+        {
+          message &&
+          <h2 className="loader__text">
+            {message}
+          </h2>
+        }
       </div>
     </div>
   )
+}
+
+Loader.propTypes = {
+  message: PropTypes.string
 }
 
 
