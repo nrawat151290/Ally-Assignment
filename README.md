@@ -62,8 +62,9 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 3. **Expand/Collpase:** Simple effect as been added.
 4. Added count of rendered records in the heading of OKRs section.
 5. Color of objective and key-results title is kept as a shade of blue. This would clearly indicate that they are clickable.
-6. If any objective doesn't have any key-result, we'll show "No key results to display" message.
-7. Scroll to Top has been added for operational ease.
+6. **Scroll to Top** has been added for operational ease.
+7. If any objective doesn't have any key-result, we'll show "No key results to display" message.
+
 
 
 
