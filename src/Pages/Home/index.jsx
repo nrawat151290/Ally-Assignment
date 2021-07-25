@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchOKRs, filterOKRs } from '../../Containers/Actions/ActionsRepository';
-import { Filter, OKRS, Loader, Details } from '../../Components/ComponentsRepository';
+import { Filter, OKRS, Loader, Details, ScrollToTop } from '../../Components/ComponentsRepository';
 import { FILTER_KEY } from '../../Utils/Constants';
 import { OkrsContext } from '../../Utils/Contexts';
 import { filterData } from '../../Utils/Helpers';
@@ -58,6 +58,7 @@ class Home extends PureComponent {
             onDetailsHide={this.hideDetails}
           />
         }
+        <ScrollToTop />
       </div>
     )
   }

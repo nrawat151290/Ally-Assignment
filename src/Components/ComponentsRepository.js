@@ -8,6 +8,7 @@ import OKRS from './OKRS';
 import Arrow from './Arrow';
 import Loader from './Loader';
 import Details from './Details';
+import ScrollToTop from './ScrollToTop';
 
 export {
   Accordion,
@@ -19,5 +20,6 @@ export {
   OKRS,
   Arrow,
   Loader,
-  Details
+  Details,
+  ScrollToTop
 }
