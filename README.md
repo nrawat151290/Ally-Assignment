@@ -1,9 +1,10 @@
 # General Information
 1. Used create-react-app boilerplate to setup the skeleton.
-2. Redux & Redux-Saga middleware have been setup from scratch, without using any boilerplate.
-3. Axios has been used for XHR calls.
-4. **Roboto** font has been used.
-5. Wherever possible, Block, Elements, Modifier(BEM) methodology has been used to name CSS classes.
+2. Application will work on **Google Chrome & Firefox** as it uses ES6 without transpilation to ES5.
+3. Redux & Redux-Saga middleware have been setup from scratch, without using any boilerplate.
+4. Axios has been used for XHR calls.
+5. **Roboto** font has been used.
+6. Wherever possible, Block, Elements, Modifier(BEM) methodology has been used to name CSS classes.
 
 
 
