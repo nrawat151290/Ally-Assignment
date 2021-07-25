@@ -16,6 +16,12 @@
 
 
 
+# Routes
+1. There is just one application route called **/ally/home**.
+2. Any invalid route would render a no-match view.
+
+
+
 
 # Corrupted/Incorrect data returned by API
 Noticed a few key-result objects having corrputed parent_objective_id, example below:
