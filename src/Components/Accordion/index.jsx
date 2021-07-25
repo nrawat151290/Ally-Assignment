@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { AccordionItem } from '../ComponentsRepository';
 import './index.css';
 
+/*
+- Methods renderAccordionItemHead and renderAccordionItemContent are generic renderers.
+- Maintained by component/container which uses Accordion component.
+- This enables the capability to render any content required rather than hardcoding the markup within Accordion.
+*/
 const Accordion = (props) => {
   const {
     dataAttrs = {},
