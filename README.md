@@ -43,7 +43,6 @@ Noticed a few key-result objects having corrputed parent_objective_id, example b
 
 # Expand and Collapse
 1. Expand/Collapse would work on clicking on **arrows only**. This has been done to keep toggle and show-details behavior separate.
-2. **Persistent Behavior:** Toggle state is persisted even on selection/unselection of filters.
 
 
 
