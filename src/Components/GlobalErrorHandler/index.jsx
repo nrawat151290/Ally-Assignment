@@ -8,7 +8,7 @@ class GlobalErrorHandler extends PureComponent {
     const classes = `global-error-handler${message ? " center-of-page" : ""}`;
     return (
       <div className={classes}>
-        {message ? message : this.props.children}
+        {message ? <h1>{message}</h1> : this.props.children}
       </div>
     );
   }

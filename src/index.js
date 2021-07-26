@@ -14,6 +14,5 @@ ReactDOM.render(
       <Routes />
     </GlobalErrorHandler>
   </Provider >
-  ,
-  document.getElementById('root')
+  , document.getElementById('root')
 );

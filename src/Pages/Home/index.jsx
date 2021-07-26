@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchOKRs, filterOKRs } from '../../Containers/Actions/ActionsRepository';
 import { Filter, OKRS, Loader, Details, ScrollToTop } from '../../Components/ComponentsRepository';
-import { FILTER_KEY } from '../../Utils/Constants';
-import { OkrsContext } from '../../Utils/Contexts';
+import { FILTER_KEY, MESSAGES } from '../../Utils/Constants';
 import { filterData } from '../../Utils/Helpers';
 import './index.css';
 
@@ -40,7 +39,7 @@ class Home extends PureComponent {
     const { filters, okrs, isFetching = false } = this.props;
     const { selectedObjective } = this.state;
     if (isFetching) {
-      return <Loader message="Sit back and relax. OKRs are on their way..." />
+      return <Loader message={MESSAGES.LOADING_MESSAGE} />
     }
     return (
       <div className="home-page">
@@ -48,9 +47,7 @@ class Home extends PureComponent {
           filters={filters}
           onSelection={this.filter}
         />
-        <OkrsContext.Provider value={okrs}>
-          <OKRS showDetails={this.showDetails} />
-        </OkrsContext.Provider>
+        <OKRS okrs={okrs} showDetails={this.showDetails} />
         {
           selectedObjective &&
           <Details

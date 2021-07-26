@@ -1,7 +1,7 @@
 import { put } from "redux-saga/effects";
 import { fetchOKRs } from "../../Utils/Services";
 import { OKRS_RECEIVED, ERROR_OCCURRED, FETCHING_DATA, FETCH_COMPLETE } from "../Actions/ActionTypes";
-import { ERROR_MESSAGES } from '../../Utils/Constants'
+import { MESSAGES } from '../../Utils/Constants';
 
 export function* OKRSaga({ filterKey }) {
 
@@ -37,6 +37,6 @@ export function* OKRSaga({ filterKey }) {
       filters
     });
   } catch (err) {
-    yield put({ type: ERROR_OCCURRED, message: ERROR_MESSAGES.API_ERROR });
+    yield put({ type: ERROR_OCCURRED, message: MESSAGES.API_ERROR });
   }
 }
