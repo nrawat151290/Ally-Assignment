@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { AccordionItem } from '../ComponentsRepository';
 import './index.css';
@@ -8,37 +8,41 @@ import './index.css';
 - Maintained by component/container which uses Accordion component.
 - This enables the capability to render any content required rather than hardcoding the markup within Accordion.
 */
-const Accordion = (props) => {
-  const {
-    dataAttrs = {},
-    items = [],
-    renderAccordionItemHead = () => { return null; },
-    renderAccordionItemContent = () => { return null; },
-    wrapperClassName
-  } = props;
-  const wrapperClasses = `accordion ${wrapperClassName || ""}`;
-  if (!items.length) {
-    return null;
+
+/* Keeping it as class component so that it doesn't completely unmount/mount when new props(data) are received */
+class Accordion extends PureComponent {
+  render() {
+    const {
+      dataAttrs = {},
+      items = [],
+      renderAccordionItemHead = () => { return null; },
+      renderAccordionItemContent = () => { return null; },
+      wrapperClassName
+    } = this.props;
+    const wrapperClasses = `accordion ${wrapperClassName || ""}`;
+    if (!items.length) {
+      return null;
+    }
+    return (
+      <div className={wrapperClasses} {...dataAttrs}>
+        {
+          items.map((item, index) => {
+            return (
+              <AccordionItem
+                key={item.id}
+                dataAttrs={{
+                  "data-item": item.id
+                }}
+                head={renderAccordionItemHead(item, index + 1)}
+              >
+                {renderAccordionItemContent(item)}
+              </AccordionItem>
+            );
+          })
+        }
+      </div>
+    )
   }
-  return (
-    <div className={wrapperClasses} {...dataAttrs}>
-      {
-        items.map((item, index) => {
-          return (
-            <AccordionItem
-              key={item.id}
-              dataAttrs={{
-                "data-item": item.id
-              }}
-              head={renderAccordionItemHead(item, index + 1)}
-            >
-              {renderAccordionItemContent(item)}
-            </AccordionItem>
-          );
-        })
-      }
-    </div>
-  )
 }
 
 Accordion.propTypes = {
