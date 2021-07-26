@@ -19,13 +19,14 @@
 
 .okrs .objective-title .category {
     display: none;
-    margin-left: 30px;
+    margin-left: 25px;
     font-weight: 500;
     padding: 2px 10px;
     background-color: #13ce95;
     border-radius: 20px;
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 .okrs .objective-title .objective-title__text {
