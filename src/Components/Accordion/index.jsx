@@ -12,8 +12,8 @@ const Accordion = (props) => {
   const {
     dataAttrs = {},
     items = [],
-    renderAccordionItemHead = () => { },
-    renderAccordionItemContent = () => { },
+    renderAccordionItemHead = () => { return null; },
+    renderAccordionItemContent = () => { return null; },
     wrapperClassName
   } = props;
   const wrapperClasses = `accordion ${wrapperClassName || ""}`;
