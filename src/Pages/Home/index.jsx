@@ -69,7 +69,7 @@ const generateObjectivesToKeyReultsMappingList = (okrs) => {
   okrs.forEach((objective) => {
     if (!objective['parent_objective_id']) {
       const keyResultsOfAnObjective = okrs.filter((keyResult) => {
-        return keyResult['parent_objective_id'] == objective.id;
+        return keyResult['parent_objective_id'] === objective.id;
       });
       result.push({ ...objective, keyResults: keyResultsOfAnObjective });
     }
