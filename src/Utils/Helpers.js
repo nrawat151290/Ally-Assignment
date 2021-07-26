@@ -8,3 +8,9 @@ export const filterData = ({ data = [], key = "", value = [] }) => {
   }
   return result;
 }
+
+export const delay = async (duration = 0) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, duration);
+  });
+}
