@@ -20,6 +20,9 @@ class AccordionItem extends PureComponent {
     const { "data-item": dataItem, ...restDataAttrs } = dataAttrs;
     const wrapperClasses = `accordion-item${open ? ' accordion-item--open' : ""} ${wrapperClassName || ""}`;
     const arrowClasses = `accordion-item-icon${open ? " accordion-item-icon--open" : ""}`;
+    if (!head || !children) {
+      return null;
+    }
     return (
       <div className={wrapperClasses}>
         <span data-item={dataItem} onClick={this.toggleHandler} className={arrowClasses}>
